@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/tabs_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottombar_height">
+
+        <ImageButton
+            android:id="@+id/tabs_btn_close"
+            android:layout_width="@dimen/bottombar_height"
+            android:layout_height="match_parent"
+            android:background="@color/apptheme_color"
+            android:src="@drawable/ic_ab_back_holo_dark_am"/>
+
+        <com.astuetz.PagerSlidingTabStrip
+        android:id="@+id/tabs_strip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.zreader.main.zReaderActivity"
+        android:background="@color/apptheme_color"
+         />
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabs_container"
+        tools:context="com.zreader.main.zReaderActivity" >
+
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>
